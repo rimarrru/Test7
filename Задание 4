@@ -1,0 +1,11 @@
+import string
+file_read = open('mama.txt', 'r', encoding='utf-8')
+data = file_read.read()
+chars = [i for i in data.lower() if i in string.ascii_letters]
+# chars = sum(map(str.isalpha, data))
+words = data.split()
+lines = data.splitlines()
+file_read.close()
+print('Количество букв в файле:', len(chars))
+print('Количество слов в файле:', len(words))
+print('Количество строк в файле:', len(lines))
