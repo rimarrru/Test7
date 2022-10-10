@@ -1,0 +1,14 @@
+# Прямой порядок строк
+with open("111.txt","r") as fi:
+      with open("222.txt","w") as fo:
+            for stri in fi:
+                stri=stri[-2::-1]+"\n"
+                fo.write(stri)
+ 
+# Обратный порядок строк
+with open("111.txt","r") as fi:
+      fcont=fi.read().split("\n")
+      with open("222.txt","w") as fo:
+            for stri in fcont[-1::-1]:
+                stri=stri[-1::-1]+"\n"
+                fo.write(stri)
